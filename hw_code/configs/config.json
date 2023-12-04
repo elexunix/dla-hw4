@@ -1,0 +1,87 @@
+{
+  "name": "default_config",
+  "n_gpu": 1,
+  "preprocessing": {
+    "sr": 22050,
+    "spectrogram": {
+      "type": "MelSpectrogram",
+      "args": {
+      }
+    },
+    "log_spec": true
+  },
+  "augmentations": {
+    "wave": [],
+    "spectrogram": []
+  },
+  "arch": {
+    "type": "HiFiGAN",
+    "args": {
+      "n_mels": 80,
+      "lrelu_slope": 0.1
+    }
+  },
+  "data": {
+    "train": {
+      "batch_size": 16,
+      "num_workers": 0,
+      "datasets": [
+       {
+          "type": "LJSpeechDataset",
+          "args": {
+            "part": "train",
+            "segment_size": 8192
+          }
+        }
+      ]
+    },
+    "val": {
+      "batch_size": 16,
+      "num_workers": 0,
+      "datasets": [
+       {
+          "type": "LJSpeechDataset",
+          "args": {
+            "part": "valid",
+            "segment_size": 8192
+          }
+        }
+      ]
+    }
+  },
+  "optimizer": {
+    "type": "Adam",
+    "args": {
+      "lr": 3e-4
+    }
+  },
+  "loss": {
+    "type": "HiFiLoss",
+    "args": {}
+  },
+  "metrics": [
+  ],
+  "lr_scheduler": {
+    "type": "OneCycleLR",
+    "args": {
+      "steps_per_epoch": 400,
+      "epochs": 301,
+      "anneal_strategy": "cos",
+      "max_lr": 3e-4,
+      "pct_start": 0.2
+    }
+  },
+  "trainer": {
+    "epochs": 300,
+    "log_interval": 50,
+    "save_dir": "saved/",
+    "save_period": 5,
+    "verbosity": 2,
+    "monitor": "min val_total_loss",
+    "early_stop": 100,
+    "visualize": "wandb",
+    "wandb_project": "nv_project",
+    "len_epoch": 400,
+    "grad_norm_clip": 10
+  }
+}

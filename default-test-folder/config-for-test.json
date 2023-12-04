@@ -1,0 +1,53 @@
+{
+  "name": "default_config",
+  "n_gpu": 1,
+  "preprocessing": {
+    "sr": 22050,
+    "spectrogram": {
+      "type": "MelSpectrogram",
+      "args": {
+      }
+    },
+    "log_spec": true
+  },
+  "augmentations": {
+    "wave": [],
+    "spectrogram": []
+  },
+  "arch": {
+    "type": "HiFiGAN",
+    "args": {
+      "n_mels": 80,
+      "lrelu_slope": 0.1
+    }
+  },
+  "data": {
+    "test": {
+       "batch_size": 1,
+       "num_workers": 0,
+       "datasets": [
+        {
+          "type": "VocoderTestDataset",
+          "args": {
+            "data_dir": "default-test-folder/test-dataset"
+          }
+        }
+      ]
+    }
+  },
+  "metrics": [
+  ],
+  "trainer": {
+    "epochs": 300,
+    "log_interval": 50,
+    "save_dir": "saved/",
+    "save_period": 5,
+    "verbosity": 2,
+    "monitor": "min val_total_loss",
+    "early_stop": 100,
+    "visualize": "wandb",
+    "wandb_project": "nv_project",
+    "len_epoch": 400,
+    "grad_norm_clip": 10
+  }
+}

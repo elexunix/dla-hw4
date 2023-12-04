@@ -1,0 +1,158 @@
+model with 72188465 parameters
+HiFiGAN(
+  (audio_to_mel_fn): MelSpectrogram(
+    (mel_spectrogram): MelSpectrogram(
+      (spectrogram): Spectrogram()
+      (mel_scale): MelScale()
+    )
+  )
+  (generator): HiFiGenerator(
+    (conv_pre): Sequential(
+      (0): Conv1d(80, 256, kernel_size=(7,), stride=(1,), padding=(3,))
+      (1): LeakyReLU(negative_slope=0.1)
+    )
+    (upsamples): ModuleList(
+      (0): ConvTranspose1d(256, 128, kernel_size=(16,), stride=(8,), padding=(4,))
+      (1): ConvTranspose1d(128, 64, kernel_size=(16,), stride=(8,), padding=(4,))
+      (2): ConvTranspose1d(64, 32, kernel_size=(8,), stride=(4,), padding=(2,))
+    )
+    (mrffs): ModuleList(
+      (0): MultiReceptiveFieldFusion(
+        (resblocks): ModuleList(
+          (0): ResBlockV2(
+            (stack1): Sequential(
+              (0): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(1,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+            (stack2): Sequential(
+              (0): Conv1d(128, 128, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+          )
+          (1): ResBlockV2(
+            (stack1): Sequential(
+              (0): Conv1d(128, 128, kernel_size=(5,), stride=(1,), padding=(4,), dilation=(2,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+            (stack2): Sequential(
+              (0): Conv1d(128, 128, kernel_size=(5,), stride=(1,), padding=(12,), dilation=(6,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+          )
+          (2): ResBlockV2(
+            (stack1): Sequential(
+              (0): Conv1d(128, 128, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+            (stack2): Sequential(
+              (0): Conv1d(128, 128, kernel_size=(7,), stride=(1,), padding=(36,), dilation=(12,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+          )
+        )
+      )
+      (1): MultiReceptiveFieldFusion(
+        (resblocks): ModuleList(
+          (0): ResBlockV2(
+            (stack1): Sequential(
+              (0): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(1,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+            (stack2): Sequential(
+              (0): Conv1d(64, 64, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+          )
+          (1): ResBlockV2(
+            (stack1): Sequential(
+              (0): Conv1d(64, 64, kernel_size=(5,), stride=(1,), padding=(4,), dilation=(2,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+            (stack2): Sequential(
+              (0): Conv1d(64, 64, kernel_size=(5,), stride=(1,), padding=(12,), dilation=(6,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+          )
+          (2): ResBlockV2(
+            (stack1): Sequential(
+              (0): Conv1d(64, 64, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+            (stack2): Sequential(
+              (0): Conv1d(64, 64, kernel_size=(7,), stride=(1,), padding=(36,), dilation=(12,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+          )
+        )
+      )
+      (2): MultiReceptiveFieldFusion(
+        (resblocks): ModuleList(
+          (0): ResBlockV2(
+            (stack1): Sequential(
+              (0): Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(1,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+            (stack2): Sequential(
+              (0): Conv1d(32, 32, kernel_size=(3,), stride=(1,), padding=(2,), dilation=(2,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+          )
+          (1): ResBlockV2(
+            (stack1): Sequential(
+              (0): Conv1d(32, 32, kernel_size=(5,), stride=(1,), padding=(4,), dilation=(2,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+            (stack2): Sequential(
+              (0): Conv1d(32, 32, kernel_size=(5,), stride=(1,), padding=(12,), dilation=(6,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+          )
+          (2): ResBlockV2(
+            (stack1): Sequential(
+              (0): Conv1d(32, 32, kernel_size=(7,), stride=(1,), padding=(9,), dilation=(3,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+            (stack2): Sequential(
+              (0): Conv1d(32, 32, kernel_size=(7,), stride=(1,), padding=(36,), dilation=(12,))
+              (1): LeakyReLU(negative_slope=0.1)
+            )
+          )
+        )
+      )
+    )
+    (conv_post): Sequential(
+      (0): Conv1d(32, 1, kernel_size=(7,), stride=(1,), padding=(3,))
+      (1): Tanh()
+    )
+  )
+  (disc_period): HiFiDiscriminatorMultiPeriod(
+    (children_discriminators): ModuleList(
+      (0-4): 5 x HiFiDiscriminatorP(
+        (convs_main): ModuleList(
+          (0): Conv2d(1, 32, kernel_size=(5, 1), stride=(3, 1), padding=(2, 0))
+          (1): Conv2d(32, 128, kernel_size=(5, 1), stride=(3, 1), padding=(2, 0))
+          (2): Conv2d(128, 512, kernel_size=(5, 1), stride=(3, 1), padding=(2, 0))
+          (3): Conv2d(512, 1024, kernel_size=(5, 1), stride=(3, 1), padding=(2, 0))
+          (4): Conv2d(1024, 1024, kernel_size=(5, 1), stride=(1, 1), padding=(2, 0))
+        )
+        (conv_post): Conv2d(1024, 1, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+      )
+    )
+  )
+  (disc_scale): HiFiDiscriminatorMultiScale(
+    (children_discriminators): ModuleList(
+      (0-2): 3 x HiFiDiscriminatorS(
+        (convs_main): ModuleList(
+          (0): Conv1d(1, 128, kernel_size=(15,), stride=(1,), padding=(7,))
+          (1): Conv1d(128, 128, kernel_size=(41,), stride=(2,), padding=(20,), groups=4)
+          (2): Conv1d(128, 256, kernel_size=(41,), stride=(2,), padding=(20,), groups=16)
+          (3): Conv1d(256, 512, kernel_size=(41,), stride=(4,), padding=(20,), groups=16)
+          (4): Conv1d(512, 1024, kernel_size=(41,), stride=(4,), padding=(20,), groups=16)
+          (5): Conv1d(1024, 1024, kernel_size=(41,), stride=(1,), padding=(20,), groups=16)
+          (6): Conv1d(1024, 1024, kernel_size=(5,), stride=(1,), padding=(2,))
+        )
+        (conv_post): Conv1d(1024, 1, kernel_size=(3,), stride=(1,), padding=(1,))
+      )
+    )
+  )
+)

@@ -1,0 +1,131 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {1}The \texttt  {LJSpeechDataset} Class}{1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Initialization}{1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Retrieving Items}{1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Data Structure}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Dataset Length}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}The \texttt  {VocoderTestDataset} Class}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Initialization}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Data Confirmation Process}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Retrieving Items}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Data Structure}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Conclusion}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}The HiFiGAN Model}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}The \texttt  {ResBlockV1} Class}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Structure and Initialization}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Forward Pass}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Residual Learning}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Refinement of HiFiGAN Architecture}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}\texttt  {ResBlockV2} Class}{4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}\texttt  {MultiReceptiveFieldFusion} Class}{5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Conclusion on Low-Level Architecture Components}{5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of the ResBlockV2 and MRFF blocks in the HiFiGAN architecture\relax }}{5}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:hifigan-blocks}{{1}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}The Generative Component of HiFiGAN}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Initialization of the \texttt  {HiFiGenerator}}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Forward Pass Dynamics}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Conclusion}{7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Diagram of the waveform generation process in the HiFiGenerator class\relax }}{7}\protected@file@percent }
+\newlabel{fig:hifi_generator}{{2}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discriminative Components of HiFiGAN}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}The \texttt  {HiFiDiscriminatorP} Class}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}The \texttt  {HiFiDiscriminatorMultiPeriod} Class}{8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Implications for Audio Fidelity}{8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Schematic of the discriminating process in the Discriminators\relax }}{8}\protected@file@percent }
+\newlabel{fig:hifigan-discriminators}{{3}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Advancing Fidelity with Scale Discriminators}{8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}The \texttt  {HiFiDiscriminatorS} Class}{9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}The \texttt  {HiFiDiscriminatorMultiScale} Class}{9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Synthesis Judgment and Training}{9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The operational flow within the Scale and Multi-Scale Discriminators\relax }}{9}\protected@file@percent }
+\newlabel{fig:hifigan-discriminators}{{4}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Harmonizing Synthesis with HiFiGAN}{10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}The Unified \texttt  {HiFiGAN} Class}{10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Operational Workflow}{10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Inference Mode}{10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}The Art of Learning: Loss Computation in HiFiGAN}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Feature Matching Loss}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Generator Loss}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Discriminator Loss}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4}Mel-Spectrogram Loss}{12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.5}Conducting the Learning Orchestra}{12}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces A representation of the total loss functions guiding the HiFiGAN's training concert\relax }}{12}\protected@file@percent }
+\newlabel{fig:hifigan-loss-functions}{{5}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Illustration of the total loss computation and its components within the HiFiGAN training cycle.\relax }}{13}\protected@file@percent }
+\newlabel{fig:hifigan-loss-functions}{{6}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Data Collation for Deep Learning: \texttt  {nv\_collate\_fn}\\ and \texttt  {get\_collate\_fn}}{13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}\texttt  {nv\_collate\_fn}}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}\texttt  {get\_collate\_fn}}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Ensuring Smooth Data Flow}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11}The \texttt  {NVTrainer} Class: Conducting the Neural Vocoder Training}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Initialization and Configuration}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.1.1}Configurable Parameters}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.1.2}Metric Management}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.1.3}Batch and Device Management}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Gradual Refinements}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3}\texttt  {\_train\_epoch} Method}{15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.4}Closing Note}{16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.5}The \texttt  {\_train\_epoch} Method: A Training Epoch in Action}{16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.6}Eloquent Epoch Execution}{16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.7}Visualization and Audio Logging}{17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.8}Concluding with the Transcription of Learning}{17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.9}Method Details of \texttt  {NVTrainer}}{17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.9.1}\texttt  {process\_batch} Method}{17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.9.2}\texttt  {\_evaluation\_epoch} Method}{18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.10}The Supporting Acts in \texttt  {NVTrainer}'s Ensemble}{18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.10.1}The \texttt  {\_progress} Method}{18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.10.2}Log Methods: \texttt  {\_log\_spectrogram} and \texttt  {\_log\_audio}}{18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.10.3}Monitoring the Model's Strait: \texttt  {get\_grad\_norm}}{19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.10.4}The Chronicler: \texttt  {\_log\_scalars}}{19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.10.5}The Art of Masking: \texttt  {mask\_length}}{19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.11}Ensemble in Harmony}{19}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12}HiFi-GAN Architectural Overview}{20}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces HiFi-GAN Generator Architecture\relax }}{20}\protected@file@percent }
+\newlabel{fig:hifigan-generator}{{7}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces HiFi-GAN Discriminator Architectures\relax }}{20}\protected@file@percent }
+\newlabel{fig:hifigan-discriminators}{{8}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces HiFi-GAN Loss Function Components\relax }}{20}\protected@file@percent }
+\newlabel{fig:hifigan-loss-functions}{{9}{20}}
+\@writefile{toc}{\contentsline {section}{\numberline {13}The run before main run}{20}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {14}Training metrics and loss comparisons of the main run}{20}\protected@file@percent }
+\newlabel{fig:total-loss-train}{{10a}{21}}
+\newlabel{sub@fig:total-loss-train}{{a}{21}}
+\newlabel{fig:total-loss-val}{{10b}{21}}
+\newlabel{sub@fig:total-loss-val}{{b}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Total Loss comparison between Training and Validation Phases\relax }}{21}\protected@file@percent }
+\newlabel{fig:learning-rate-train}{{11a}{22}}
+\newlabel{sub@fig:learning-rate-train}{{a}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Various Training and Validation Loss Comparisons\relax }}{22}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Discriminator Mean Outputs on Real and Fake Data during Training and Validation\relax }}{22}\protected@file@percent }
+\newlabel{tab:mean-disc-output}{{1}{22}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Generator Losses on Training and Validation Data\relax }}{23}\protected@file@percent }
+\newlabel{tab:gen-losses}{{2}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {15}WAV synthesis samples, as desired}{23}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {16}Memes and fun content}{24}\protected@file@percent }
+\newlabel{fig:meme-deadline-shift}{{\caption@xref {fig:meme-deadline-shift}{ on input line 812}}{24}}
+\newlabel{fig:meme-stay-back}{{\caption@xref {fig:meme-stay-back}{ on input line 819}}{24}}
+\newlabel{fig:meme-shrek-plane}{{\caption@xref {fig:meme-shrek-plane}{ on input line 826}}{25}}
+\newlabel{fig:meme-diamonds}{{\caption@xref {fig:meme-diamonds}{ on input line 833}}{25}}
+\newlabel{fig:meme-brainwashed}{{\caption@xref {fig:meme-brainwashed}{ on input line 840}}{26}}
+\newlabel{fig:meme-are-ya-winning}{{\caption@xref {fig:meme-are-ya-winning}{ on input line 847}}{26}}
+\newlabel{fig:meme-cern-paper}{{\caption@xref {fig:meme-cern-paper}{ on input line 854}}{27}}
+\newlabel{fig:meme-time-travel}{{\caption@xref {fig:meme-time-travel}{ on input line 861}}{28}}
+\newlabel{fig:meme-conflicts}{{\caption@xref {fig:meme-conflicts}{ on input line 868}}{28}}
+\newlabel{fig:meme-training-loop}{{\caption@xref {fig:meme-training-loop}{ on input line 875}}{29}}
+\newlabel{fig:meme-fork}{{\caption@xref {fig:meme-fork}{ on input line 882}}{29}}
+\newlabel{fig:meme-wrong-meme}{{\caption@xref {fig:meme-wrong-meme}{ on input line 889}}{30}}
+\newlabel{fig:meme-transformer}{{\caption@xref {fig:meme-transformer}{ on input line 896}}{31}}
+\newlabel{fig:meme-danger-genius}{{\caption@xref {fig:meme-danger-genius}{ on input line 903}}{32}}
+\newlabel{fig:meme-problem}{{\caption@xref {fig:meme-problem}{ on input line 910}}{33}}
+\newlabel{fig:meme-scam-banks}{{\caption@xref {fig:meme-scam-banks}{ on input line 917}}{34}}
+\newlabel{fig:meme-tennis}{{\caption@xref {fig:meme-tennis}{ on input line 924}}{35}}
+\newlabel{fig:meme-time-to-go}{{\caption@xref {fig:meme-time-to-go}{ on input line 931}}{36}}
+\newlabel{fig:meme-two-headed-camel}{{\caption@xref {fig:meme-two-headed-camel}{ on input line 938}}{36}}
+\newlabel{fig:meme-half-snake}{{\caption@xref {fig:meme-half-snake}{ on input line 947}}{37}}
+\newlabel{fig:meme-delete-branch}{{\caption@xref {fig:meme-delete-branch}{ on input line 954}}{37}}
+\newlabel{fig:meme-horseriders}{{\caption@xref {fig:meme-horseriders}{ on input line 961}}{38}}
+\newlabel{fig:meme-cloudy-clouds}{{\caption@xref {fig:meme-cloudy-clouds}{ on input line 968}}{39}}
+\newlabel{fig:meme-spam-drink}{{\caption@xref {fig:meme-spam-drink}{ on input line 975}}{39}}
+\newlabel{fig:meme-good-design}{{\caption@xref {fig:meme-good-design}{ on input line 982}}{39}}
+\newlabel{fig:meme-finally-won}{{\caption@xref {fig:meme-finally-won}{ on input line 989}}{40}}
